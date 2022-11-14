@@ -4,11 +4,11 @@ const SpecialPrice = (sequelize) => {
     return sequelize.define("SpecialPrice" , {
         type : {
             type : DataTypes.STRING,
-            alloNull : true
+            alloNull : false
         },
         discount : {
-            type : DataTypes.INTEGER(10),
-            allowNull : true
+            type : DataTypes.INTEGER,
+            allowNull : false
         },
         start_date : {
             type : DataTypes.DATE,

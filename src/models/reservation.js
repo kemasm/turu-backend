@@ -11,11 +11,11 @@ const Reservation = (sequelize) => {
             allowNull : false
         },
         status : {
-            type : DataTypes.SMALLINT(5),
+            type : DataTypes.SMALLINT,
             allowNull : false
         },
         guest_count : {
-            type : DataTypes.INTEGER(10),
+            type : DataTypes.INTEGER,
             allowNull : false
         }
     })

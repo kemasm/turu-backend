@@ -1,7 +1,7 @@
 const express = require("express")
 const cors = require("cors")
 // libary utk membaca request header dar user
-const bearerToken = require('express-bearer-token')
+// const bearerToken = require('express-bearer-token')
 
 const port = process.env.PORT || 8000
 
@@ -10,7 +10,7 @@ const app = express()
 // menjalankan middleware
 app.use(cors())
 app.use(express.json())
-app.use(bearerToken())
+// app.use(bearerToken())
 
 // utk sequelize
 const {sequelize} = require("./lib/sequelize")

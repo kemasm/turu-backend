@@ -7,7 +7,7 @@ const Verification = (sequelize) => {
             allowNull : false
         },
         is_active : {
-            type : DataTypes.SMALLINT(5),
+            type : DataTypes.BOOLEAN,
             allowNull : false
         },
         expiration_date : {

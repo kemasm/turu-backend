@@ -23,11 +23,11 @@ const User = (sequelize) => {
             allowNull : false
         },
         profile_pic : {
-            type : DataTypes.STRING,
+            type : DataTypes.TEXT,
             allowNull : true
         },
         is_verified : {
-            type : DataTypes.SMALLINT(5),
+            type : DataTypes.BOOLEAN,
             allowNull : false
         },
         reset_password_token : {
@@ -35,7 +35,8 @@ const User = (sequelize) => {
             allowNull : true
         },
         reset_password_expires : {
-            type : DataTypes.TIMESTAMP
+            type : "TIMESTAMP",
+            allowNull: true
         }
     })
 }
