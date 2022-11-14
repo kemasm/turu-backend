@@ -7,7 +7,7 @@ const Property = (sequelize) => {
             allowNull : false
         },
         description : {
-            type : DataTypes.STRING,
+            type : DataTypes.TEXT,
             allowNull : false
         },
         picture : {
@@ -15,8 +15,8 @@ const Property = (sequelize) => {
             allowNull : false
         },
         rules : {
-            type : DataTypes.STRING,
-            allowNull : false
+            type : DataTypes.TEXT,
+            allowNull : false,
         }
     })
 }

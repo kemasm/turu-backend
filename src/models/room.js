@@ -7,11 +7,11 @@ const Room = (sequelize) => {
             allowNull : false
         },
         default_price : {
-            type : DataTypes.INTEGER(10),
-            allowNull : true
+            type : DataTypes.INTEGER,
+            allowNull : false
         },
         description : {
-            type : DataTypes.STRING,
+            type : DataTypes.TEXT,
             allowNull : true
         }
     })
