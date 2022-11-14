@@ -4,7 +4,7 @@ const SpecialPrice = (sequelize) => {
     return sequelize.define("SpecialPrice" , {
         type : {
             type : DataTypes.STRING,
-            alloNull : false
+            allowNull : false
         },
         discount : {
             type : DataTypes.INTEGER,

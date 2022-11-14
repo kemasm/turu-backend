@@ -20,7 +20,7 @@ const User = (sequelize) => {
         },
         birthdate : {
             type : DataTypes.DATE,
-            allowNull : false
+            allowNull : true
         },
         profile_pic : {
             type : DataTypes.TEXT,
@@ -35,8 +35,8 @@ const User = (sequelize) => {
             allowNull : true
         },
         reset_password_expires : {
-            type : "TIMESTAMP",
-            allowNull: true
+            type : 'TIMESTAMP',
+            allowNull : true
         }
     })
 }

@@ -20,11 +20,10 @@ const Property = require("../models/property")(sequelize)
 const Tenant = require("../models/tenant")(sequelize)
 const Category = require("../models/category")(sequelize)
 const Bank = require("../models/bank")(sequelize)
-const RoomUnavailabilty = require("../models/room_unavailability")(sequelize)
+const RoomUnavailability = require("../models/room_unavailability")(sequelize)
 
-// Relationship
-User.hasMany(Verification) // karena akan punya 5 otp maksimal
-Verification.belongsTo(User, {onDelete: "CASCADE"}) // akn di miliki oleh 1 user
+User.hasMany(Verification)
+Verification.belongsTo(User)
 
 User.hasMany(Reservation)
 Reservation.belongsTo(User)
@@ -53,9 +52,8 @@ Reservation.belongsTo(Room)
 Room.hasMany(SpecialPrice)
 SpecialPrice.belongsTo(Room)
 
-Room.hasMany(RoomUnavailabilty)
-RoomUnavailabilty.belongsTo(Room)
-
+Room.hasMany(RoomUnavailability)
+RoomUnavailability.belongsTo(Room)
 
 module.exports = {
     sequelize,

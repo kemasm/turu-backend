@@ -14,7 +14,7 @@ app.use(express.json())
 
 // utk sequelize
 const {sequelize} = require("./lib/sequelize")
-// sequelize.sync({ alter: true })
+sequelize.sync({ alter: true })
 
 //menjalankan port
 app.listen(port, () => console.log("API running :" , port))
