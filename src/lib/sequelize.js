@@ -1,12 +1,12 @@
+const {env} = require("../configs/index")
 const {Sequelize} = require("sequelize")
-const dbConfig = require("../configs/db")
 
 const sequelize = new Sequelize({
-    username : dbConfig.MYSQL_USER,
-    password : dbConfig.MYSQL_PASSWORD,
-    database : dbConfig.MYSQL_DB_NAME,
-    port : dbConfig.MYSQL_PORT,
-    dialect : "mysql" //dialect : adalah database yg kita pakai
+    username : env.MYSQL_USER,
+    password : env.MYSQL_PASSWORD,
+    database : env.MYSQL_DB_NAME,
+    port : env.MYSQL_PORT,
+    dialect : env.DB_DIALECT
 })
 
 const User = require("../models/user")(sequelize)
